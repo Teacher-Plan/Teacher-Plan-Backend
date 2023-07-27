@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.0-SNAPSHOT'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.github.ioloolo.schoolhelper_teacher'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.jetbrains:annotations:24.0.0'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'com.github.ioloolo:ComciganApi:1.1.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
