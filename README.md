@@ -1,5 +1,10 @@
-# School Helper For Teacher
-2023학년도 제천고등학교 코딩 동아리인 코딩연구소에서 제작한 [School Helper](https://github.com/School-Helper-ioloolo/School-Helper-Backend)의 교사 버전 백엔드 API
+# [Backend] School Helper For Teacher
+2023학년도 제천고등학교 코딩 동아리인 코딩연구소에서 제작한 [School Helper](https://github.com/School-Helper-ioloolo/School-Helper-Backend)의 교사 버전 백엔드 서버
+
+## 기술 스택
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## 엔드포인트
 
@@ -29,7 +34,7 @@
 - POST
 - ```json
   {
-    "school": (학교 코드),
+    "school": (학교 코드)
     "teacher": (교사 ID)
   }
   ```
@@ -50,7 +55,7 @@
 - POST
 - ```json
   {
-    "name": (학교 이름),
+    "name": (학교 이름)
     "location": (학교 도시)
   }
   ```
