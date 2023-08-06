@@ -1,4 +1,4 @@
-package com.github.ioloolo.schoolhelper_teacher.common.config;
+package com.github.ioloolo.teacher_plan.common.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

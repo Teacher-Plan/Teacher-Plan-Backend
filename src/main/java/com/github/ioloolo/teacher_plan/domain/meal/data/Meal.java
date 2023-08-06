@@ -1,4 +1,4 @@
-package com.github.ioloolo.schoolhelper_teacher.domain.meal.data;
+package com.github.ioloolo.teacher_plan.domain.meal.data;
 
 import lombok.Data;
 

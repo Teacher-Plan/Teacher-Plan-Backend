@@ -1,4 +1,4 @@
-package com.github.ioloolo.schoolhelper_teacher.domain.timetable.context;
+package com.github.ioloolo.teacher_plan.domain.timetable.context;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

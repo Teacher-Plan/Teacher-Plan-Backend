@@ -1,4 +1,4 @@
-package com.github.ioloolo.schoolhelper_teacher.domain.meal.context;
+package com.github.ioloolo.teacher_plan.domain.meal.context;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

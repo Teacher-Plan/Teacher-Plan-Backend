@@ -1,4 +1,4 @@
-package com.github.ioloolo.schoolhelper_teacher.common.config;
+package com.github.ioloolo.teacher_plan.common.config;
 
 import org.apache.catalina.connector.Connector;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;

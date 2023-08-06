@@ -1,4 +1,4 @@
-# School Helper For Teacher
+# Teacher Plan
 2023학년도 제천고등학교 코딩 동아리인 코딩연구소에서 제작한 [School Helper](https://github.com/School-Helper-ioloolo/School-Helper-Backend)의 교사 버전 백엔드 API
 
 ## 엔드포인트
