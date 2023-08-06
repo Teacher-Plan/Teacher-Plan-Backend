@@ -1,7 +1,7 @@
-package com.github.ioloolo.schoolhelper_teacher.domain.meal;
+package com.github.ioloolo.teacher_plan.domain.meal;
 
-import com.github.ioloolo.schoolhelper_teacher.domain.meal.context.GetMealRequest;
-import com.github.ioloolo.schoolhelper_teacher.domain.meal.data.Meal;
+import com.github.ioloolo.teacher_plan.domain.meal.context.GetMealRequest;
+import com.github.ioloolo.teacher_plan.domain.meal.data.Meal;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -31,6 +31,7 @@ public final class MealController {
 
     private static final OkHttpClient client = new OkHttpClient().newBuilder().build();
     private static final Gson gson = new Gson();
+
     @Value("${app.neis-key}")
     private String NEIS_API_KEY;
 
