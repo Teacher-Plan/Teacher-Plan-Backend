@@ -1,15 +1,15 @@
 package com.github.ioloolo.teacher_plan.domain.meal;
 
-import com.github.ioloolo.teacher_plan.domain.meal.context.GetMealRequest;
-import com.github.ioloolo.teacher_plan.domain.meal.data.Meal;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import lombok.RequiredArgsConstructor;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,12 +17,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.github.ioloolo.teacher_plan.domain.meal.context.GetMealRequest;
+import com.github.ioloolo.teacher_plan.domain.meal.data.Meal;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import lombok.RequiredArgsConstructor;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 @RestController
 @RequestMapping("/api/meal")
@@ -83,13 +88,15 @@ public final class MealController {
                 .get(0).getAsJsonObject()
                 .get("SD_SCHUL_CODE").getAsString();
 
+        LocalDate today = ZonedDateTime.now(ZoneId.of("Asia/Seoul")).toLocalDate();
+
         Request mealRequest = new Request.Builder()
                 .url("https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=%s&Type=json&ATPT_OFCDC_SC_CODE=%s&SD_SCHUL_CODE=%s&MLSV_YMD=%s"
                         .formatted(
                                 NEIS_API_KEY,
                                 aptp,
                                 schoolCode,
-                                "20230620"
+                                today.toString().replace("-", "")
                         ))
                 .method("POST", body)
                 .build();
