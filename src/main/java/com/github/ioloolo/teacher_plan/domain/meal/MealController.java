@@ -1,9 +1,9 @@
 package com.github.ioloolo.teacher_plan.domain.meal;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.ioloolo.teacher_plan.common.util.Cache;
 import com.github.ioloolo.teacher_plan.domain.meal.context.GetMealRequest;
 import com.github.ioloolo.teacher_plan.domain.meal.data.Meal;
 import com.google.gson.Gson;
@@ -25,11 +24,11 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
 
 @RestController
 @RequestMapping("/api/meal")
