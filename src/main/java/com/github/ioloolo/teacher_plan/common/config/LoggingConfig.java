@@ -1,14 +1,15 @@
 package com.github.ioloolo.teacher_plan.common.config;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 
 @Configuration
 public class LoggingConfig implements WebMvcConfigurer {
@@ -26,12 +27,6 @@ public class LoggingConfig implements WebMvcConfigurer {
         public boolean preHandle(HttpServletRequest request,
                                  @NotNull HttpServletResponse response,
                                  @NotNull Object handler) {
-
-            log.info("[Request] {} {}{} {}",
-                    request.getMethod(),
-                    request.getRequestURI(), (request.getQueryString() == null ? "" : "?%s".formatted(request.getQueryString())),
-                    request.getRemoteAddr());
-
             request.setAttribute("startTime", System.currentTimeMillis());
 
             return true;
