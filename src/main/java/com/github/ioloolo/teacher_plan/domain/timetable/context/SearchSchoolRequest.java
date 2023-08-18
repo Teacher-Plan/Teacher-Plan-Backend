@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public final class SearchSchoolRequest {
+public class SearchSchoolRequest {
 
     private String query;
 }

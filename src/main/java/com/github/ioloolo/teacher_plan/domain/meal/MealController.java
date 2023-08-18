@@ -34,7 +34,7 @@ import okhttp3.Response;
 @RestController
 @RequestMapping("/api/meal")
 @RequiredArgsConstructor
-public final class MealController {
+public class MealController {
 
     private static final OkHttpClient client = new OkHttpClient().newBuilder().build();
     private static final Gson gson = new Gson();

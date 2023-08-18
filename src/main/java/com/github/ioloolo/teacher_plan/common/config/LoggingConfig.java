@@ -21,12 +21,13 @@ public class LoggingConfig implements WebMvcConfigurer {
 
     @Component
     @Slf4j
-    private static final class LoggingInterceptor implements HandlerInterceptor {
+    private static class LoggingInterceptor implements HandlerInterceptor {
 
         @Override
         public boolean preHandle(HttpServletRequest request,
                                  @NotNull HttpServletResponse response,
                                  @NotNull Object handler) {
+
             request.setAttribute("startTime", System.currentTimeMillis());
 
             return true;

@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public final class GetTimeTableRequest {
+public class GetTimeTableRequest {
 
     private int school;
     private int teacher;

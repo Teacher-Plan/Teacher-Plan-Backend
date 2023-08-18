@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public final class GetMealRequest {
+public class GetMealRequest {
 
     private String name;
     private String location;

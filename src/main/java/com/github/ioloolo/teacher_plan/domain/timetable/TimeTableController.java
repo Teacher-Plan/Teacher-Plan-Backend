@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/api/timetable")
 @RequiredArgsConstructor
-public final class TimeTableController {
+public class TimeTableController {
 
     @PostMapping("/school")
     public ResponseEntity<?> searchSchool(@RequestBody SearchSchoolRequest request) {

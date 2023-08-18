@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public final class Meal {
+public class Meal {
     private final String type;
     private final List<String> menu;
 }
