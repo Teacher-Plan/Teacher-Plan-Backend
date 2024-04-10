@@ -9,18 +9,23 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration
+@RequiredArgsConstructor
 public class LoggingConfig implements WebMvcConfigurer {
+
+    private final LoggingInterceptor interceptor;
 
     @Override
     public void addInterceptors(@NotNull InterceptorRegistry registry) {
-        registry.addInterceptor(new LoggingInterceptor());
+        registry.addInterceptor(interceptor);
     }
 
-    @Component
     @Slf4j
+    @Component
     private static class LoggingInterceptor implements HandlerInterceptor {
 
         @Override
